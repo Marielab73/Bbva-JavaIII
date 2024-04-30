@@ -1,0 +1,200 @@
+@font-face {
+  font-family: 'BBVA';
+  font-weight: 300;
+  src: url("./assets/BentonSansBBVA-Light.woff");
+}
+
+@font-face {
+  font-family: 'BBVA';
+  font-weight: 500;
+  src: url("./assets/BentonSansBBVA-Medium.woff")
+}
+
+
+:root {
+  --max-width: 1200px;
+  --nav-height: 3rem;
+  font-size: 16px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "BBVA", Helvetica,Arial,sans-serif;
+  font-weight: 300;
+}
+
+header, footer {
+  background-color: #043263;
+  color: #e4e4e4;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: var(--nav-height);
+}
+
+.container {
+  margin: auto;
+  height: 100%;
+
+  padding: 0 1em;
+  display: flex;
+  justify-content: space-between;
+  gap: 5em;
+  align-items: center;
+  max-width: var(--max-width);
+}
+
+strong, h3 {
+  font-weight: 500;
+}
+
+footer {
+  font-size: 1em;
+  padding: 3em;
+}
+
+footer section {
+  padding-bottom: 1em;
+}
+
+footer .contact-data {
+  padding-bottom: 2em;
+}
+
+footer .long-text p {
+  padding-bottom: 1em;
+}
+
+.bbva-logo {
+  height: 1em;
+}
+
+.main-content {
+  padding: 3rem;
+  padding-top: calc(var(--nav-height) + 3rem);
+}
+
+.card-form {
+  display: grid;
+  grid-template-columns:1;
+  gap: 2em;
+  padding-bottom: 2rem;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(244, 244, 244);
+  font-size: 1em;
+  padding: 1em;
+  border-bottom: #0f0f0f 1px solid;
+
+  input, select {
+    background-color: transparent;
+    border: none;
+    font-family: "BBVA", Helvetica,Arial,sans-serif;
+    color: #0f0f0f;
+    font-size: 1rem;
+    font-weight: 300;
+    outline: none;
+    padding-top: 0.5em;
+  }
+}
+
+.form-title {
+  font-size: 2rem;
+}
+
+.main-inner-container {
+  flex-direction: column;
+}
+
+.left-side {
+  max-width: 600px;
+  color: #696969;
+  
+  h1 {
+    color: #0f0f0f;
+    margin-bottom: 2rem;
+    font-weight: normal;
+  }
+
+  .form-description {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+ 
+  .acepta-terminos {
+    font-weight: 500;
+    padding-bottom: 2em;
+
+    a {
+      text-decoration: none;
+      color: #1973b8;
+    }
+  }
+}
+
+.submit-button {
+  background-color: rgb(0, 165, 166);
+  color: #e4e4e4;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1em 3em;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+}
+
+.credit-card-img {
+  width: 20em;
+  margin: 5em auto;
+  transition: filter 1s ease-in-out;
+} 
+
+@media(min-width: 780px) {
+
+  .card-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .credit-card-img {
+    align-self: flex-end;
+  } 
+}
+
+@media(min-width: 1080px) {
+  .main-inner-container {
+    flex-direction: row;
+  }
+}
+
+/* Completar con las clases necesarias para que los colores se vean uno al lado del otro y el h3 se vea bonito */
+
+#card-color-options {
+  width: 100%;
+  padding-top: 24em;
+}
+
+.color-option {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  border: 1px solid #0f0f0f;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+.color-options-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
